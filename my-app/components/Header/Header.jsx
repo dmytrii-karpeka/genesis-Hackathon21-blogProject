@@ -1,11 +1,10 @@
 import {Navbar, Container, Nav, Button} from 'react-bootstrap';
 
 import css from './Header.module.scss';
-// import Droplist from "../Droplist/Droplist";
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect bg="dark" variant="dark">
+        <Navbar collapseOnSelect bg="dark" variant="dark" className={css.navbarContainer}>
             <Container>
                 <Navbar.Brand href="/">
                     <img/>

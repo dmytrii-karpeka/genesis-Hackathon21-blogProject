@@ -1,7 +1,23 @@
 .container {
   background-color: maroon;
 
-  p {
-    color: gold;
+}
+
+.cardsContainer > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 719px) {
+  .cardsContainer > div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 988px) {
+  .cardsContainer > div {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
