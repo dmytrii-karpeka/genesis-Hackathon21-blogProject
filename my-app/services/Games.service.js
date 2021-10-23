@@ -16,3 +16,20 @@ export const getGamesList = async (params) => {
     ];
   }
 };
+
+export const getGamesDetails = async (id) => {
+  try {
+      const resp = await AxiosAdapter.get('/game', { params: { id } });
+
+      return [null, resp.data];
+  } catch (err) {
+      console.log('err', err);
+      return [
+        {
+            type: 'FAILED_GAME_DETAILS_FETCH',
+            message: err.response?.data.error,
+        },
+        null,
+    ];
+  }
+};
