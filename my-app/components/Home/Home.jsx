@@ -1,16 +1,12 @@
-import * as axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Badge } from 'react-bootstrap'
 import InfiniteScroll from 'react-infinite-scroller';
+import {Container} from 'react-bootstrap'
 
 import css from './Home.module.scss';
 
+import CardItem from '../CardItem/CardItem';
 import Header from '../Header/Header';
 import { getGamesList } from '../../services/Games.service';
-
-const TestCard = ({ title }) => {
-  return <p>{title}</p>;
-};
 
 const Home = () => {
   const step = 60;
@@ -47,21 +43,23 @@ const Home = () => {
   };
 
   const renderItems = () => {
-    return visibleItems.map((item) => <TestCard key={item.id} title={item.title} />);
+    return visibleItems.map((item) => <CardItem key={item.id} item={item} />);
   };
 
   return (
     <div className={css.container}>
       <Header />
 
-      <InfiniteScroll
-        pageStart={0}
-        loadMore={getMoreItems}
-        hasMore={visibleItems.length < allItems.length}
-        loader={<p>Loading...</p>}
-      >
-        {renderItems()}
-      </InfiniteScroll>
+      <Container className={css.cardsContainer}>
+        <InfiniteScroll
+          pageStart={0}
+          loadMore={getMoreItems}
+          hasMore={visibleItems.length < allItems.length}
+          loader={<p>Loading...</p>}
+        >
+          {renderItems()}
+        </InfiniteScroll>
+      </Container>
     </div>
   );
 }
