@@ -16,10 +16,19 @@ const Home = () => {
   const step = 60;
   const [allItems, setAllItems] = useState([]);
   const [visibleItems, setVisibleItems] = useState([]);
+  const [platform, setPlatform] = useState('');
+  const [category, setCategory] = useState('');
+  const [sortBy, setSortBy] = useState('');
+
+  const filterParams = {
+    ...(platform.length > 0 && { platform }),
+    ...(category.length > 0 && { category }),
+    ...(sortBy.length > 0 && { 'sort-by': sortBy })
+  };
 
   useEffect(() => {
     const fetchItems = async () => {
-      const [err, data] = await getGamesList();
+      const [err, data] = await getGamesList(filterParams);
 
       if (err) return;
 
@@ -28,7 +37,7 @@ const Home = () => {
     };
 
     fetchItems();
-  }, []);
+  }, [platform, category, sortBy]);
 
   const getMoreItems = () => {
     const visibleItemsCount = visibleItems.length;

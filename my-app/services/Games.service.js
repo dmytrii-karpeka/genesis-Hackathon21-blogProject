@@ -1,8 +1,8 @@
 import AxiosAdapter from '../adapters/Axios.adapter';
 
-export const getGamesList = async () => {
+export const getGamesList = async (params) => {
   try {
-      const resp = await AxiosAdapter.get('/games');
+      const resp = await AxiosAdapter.get('/games', { params });
 
       return [null, resp.data];
   } catch (err) {
