@@ -1,7 +1,7 @@
 import {Navbar, Container, Nav, Button} from 'react-bootstrap';
 
 import css from './Header.module.scss';
-import Droplist from "../Droplist/Droplist";
+// import Droplist from "../Droplist/Droplist";
 
 const Header = () => {
     return (

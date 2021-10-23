@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {Form, Button, InputGroup} from "react-bootstrap";
 
+import css from './RegisterForm.module.scss';
+
 let RegisterForm = function () {
     const [validated, setValidated] = useState(false);
 
@@ -19,7 +21,7 @@ let RegisterForm = function () {
     }
 
     return (
-        <Form validated={validated} onSubmit={handleSubmit}>
+        <Form validated={validated} onSubmit={handleSubmit} className={css.form}>
             <Form.Group controlId="avatar" className="mb-3">
                 <Form.Label>Input avatar photo</Form.Label>
                 <Form.Control required type="file" />

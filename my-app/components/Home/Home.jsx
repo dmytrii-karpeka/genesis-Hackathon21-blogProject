@@ -3,6 +3,7 @@ import { Badge } from 'react-bootstrap'
 
 import css from './Home.module.scss';
 
+import Header from '../Header/Header';
 import { getGamesList } from '../../services/Games.service';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
 
   return (
     <div className={css.container}>
+      <Header />
       <p>Home page</p>
       <Badge bg="secondary">New</Badge>
     </div>
