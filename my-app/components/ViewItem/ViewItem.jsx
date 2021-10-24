@@ -42,15 +42,6 @@ const ViewItem = function ({ info }) {
                             Visit game
                         </Button>
                     </Row>
-                    <br />
-                    {/*//TODO: commentary component*/}
-                    <InputGroup>
-                        <FormControl as="textarea" />
-                        <Button size="sm" variant="outline-primary" id="button-addon2">
-                            Post
-                            commentary
-                        </Button>
-                    </InputGroup>
                 </Col>
                 <Col sm={1}>
 
