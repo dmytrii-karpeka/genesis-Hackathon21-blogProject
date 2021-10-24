@@ -12,22 +12,7 @@ const Header = () => {
                     <img/>
                     Delta
                 </Navbar.Brand>
-                <Nav
-                    onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-                >
-                    <Nav.Item>
-                        <Nav.Link href="#">New Releases</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href="#">Categories</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href="#">Online</Nav.Link>
-                    </Nav.Item>
-                </Nav>
-                <Nav>
-                    <Dropdown/>
-                </Nav>
+
                 <Nav>
                     <Nav.Item>
                         <Nav.Link href="/login">
