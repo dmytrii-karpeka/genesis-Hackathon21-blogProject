@@ -2,7 +2,7 @@ import {Navbar, Container, Nav, Button} from 'react-bootstrap';
 
 import css from './Header.module.scss';
 
-import Dropdown from '../Dropdown/Dropdown';
+import Droplist from '../Droplist/Droplist';
 
 const Header = () => {
     return (
@@ -26,7 +26,7 @@ const Header = () => {
                     </Nav.Item>
                 </Nav>
                 <Nav>
-                    <Dropdown/>
+                    <Droplist/>
                 </Nav>
                 <Nav>
                     <Nav.Item>
