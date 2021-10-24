@@ -1,39 +1,30 @@
-import {Navbar, Container, Nav, Button} from 'react-bootstrap';
+import Link from 'next/link';
+import {Navbar, Container, Nav, Button, Image} from 'react-bootstrap';
 
 import css from './Header.module.scss';
-
-import Dropdown from '../Dropdown/Dropdown';
 
 const Header = () => {
     return (
         <Navbar collapseOnSelect bg="dark" variant="dark" className={css.navbarContainer}>
             <Container>
                 <Navbar.Brand href="/">
-                    <img/>
-                    Delta
+                    <img src="https://www.deltafaucet.com/themes/custom/delta_theme/logo.svg"
+                         width="140"
+                         height="35"
+                         className="d-inline-block align-top"
+                         alt="Delta app logo"/>
                 </Navbar.Brand>
-                <Nav
-                    onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-                >
-                    <Nav.Item>
-                        <Nav.Link href="#">New Releases</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href="#">Categories</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href="#">Online</Nav.Link>
-                    </Nav.Item>
-                </Nav>
                 <Nav>
-                    <Dropdown/>
-                </Nav>
-                <Nav>
-                    <Nav.Item>
-                        <Nav.Link href="/login">
-                            <Button variant="primary">Sign In</Button>
-                        </Nav.Link>
-                    </Nav.Item>
+                    <Link href="/profile">
+                        <div className={css.profileLink}>
+                            <Image
+                                src="https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-Resize-7IYhhOMpQTI83u.jpg"
+                                width="40"
+                                height="40"
+                                className="d-inline-block align-top"
+                                alt="Profile" roundedCircle/>
+                        </div>
+                    </Link>
                 </Nav>
             </Container>
         </Navbar>

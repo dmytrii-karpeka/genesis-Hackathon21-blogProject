@@ -1,68 +1,3 @@
-// import React, {useState} from 'react';
-// import {Form, Button, inputGroup} from "react-bootstrap";
-
-// import css from './RegisterForm.module.scss';
-
-// let RegisterForm = function () {
-//     const [validated, setValidated] = useState(false);
-
-//     const handleSubmit = (event) => {
-//         const form = event.currentTarget;
-//         let password = document.getElementById('formPassword').value;
-//         let repeatedPassword = document.getElementById('formRepeatPassword').value;
-//         console.log(password, repeatedPassword);
-
-//         if (password !== repeatedPassword && form.checkValidity() === false) {
-//             event.preventDefault();
-//             event.stopPropagation();
-//         }
-
-//         setValidated(true);
-//     }
-
-//     return (
-//         <Form validated={validated} onSubmit={handleSubmit} className={css.form}>
-//             <Form.Group controlId="avatar" className="mb-3">
-//                 <Form.Label>input avatar photo</Form.Label>
-//                 <Form.Control required type="file" />
-//                 <Form.Control.Feedback>Nice photo!</Form.Control.Feedback>
-//             </Form.Group>
-
-//             <Form.Group>
-//                 <Form.Label>Username</Form.Label>
-//                 <inputGroup hasValidation>
-//                     <inputGroup.Text id="inputGroupPrepend">@</inputGroup.Text>
-//                     <Form.Control
-//                         type="text"
-//                         placeholder="veryCreativeUsername"
-//                         aria-describedby="inputGroupPrepend"
-//                         required
-//                     />
-//                     <Form.Control.Feedback type="invalid">
-//                         Please choose a username.
-//                     </Form.Control.Feedback>
-//                 </inputGroup>
-//             </Form.Group>
-
-//             <Form.Group className="mb-3" controlId="formBasicEmail">
-//                 <Form.Label>Email address</Form.Label>
-//                 <Form.Control required type="email" placeholder="example@something.com" />
-//             </Form.Group>
-
-//             <Form.Group className="mb-3" controlId="formBasicPassword">
-//                 <Form.Label>Password</Form.Label>
-//                 <Form.Control required type="password" placeholder="place here something strong" />
-//             </Form.Group>
-
-//             <Button variant="primary" type="submit">
-//                 Sign up
-//             </Button>
-//         </Form>
-//     )
-// }
-
-// export default RegisterForm;
-
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -152,6 +87,5 @@ const RegisterForm = () => {
       </Row>
     </Container>
   )
-}
 
 export default RegisterForm;

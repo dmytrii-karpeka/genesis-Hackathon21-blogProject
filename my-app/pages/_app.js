@@ -1,10 +1,27 @@
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import * as ga from '../lib/ga'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css'
 
 import { AuthUserProvider } from '../contexts/AuthContext';
 
 function MyApp({ Component, pageProps }) {
-  return <AuthUserProvider><Component {...pageProps} /></AuthUserProvider>;
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
+  return <AuthUserProvider><Component {...pageProps} /></AuthUserProvider>
 }
 
 export default MyApp
