@@ -7,10 +7,10 @@ const ProfileInfo = function () {
     return (
         <Card className="text-center">
             <Card.Body>
-                <Image src="https://via.placeholder.com/150" roundedCircle/>
-                <Card.Title>Username</Card.Title>
+                <Image src="https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-Resize-B3J09qVGW8Pu6GO.jpg" roundedCircle/>
+                <Card.Title>Agent Smith</Card.Title>
                 <Card.Text>
-                    Email:
+                    Email: agent.smith@delta.com
                 </Card.Text>
             </Card.Body>
         </Card>
