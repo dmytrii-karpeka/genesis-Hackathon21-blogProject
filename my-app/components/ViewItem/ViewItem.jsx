@@ -1,9 +1,17 @@
+import React, { useEffect, useState } from 'react';
 import ShowMoreText from 'react-show-more-text';
 import {Button, Col, Container, FormControl, Image, InputGroup, Row} from "react-bootstrap";
 
 import css from './ViewItem.module.scss';
 
 const ViewItem = function ({ info }) {
+    const [language, setLanguage] = useState('en');
+
+    useEffect(() => {
+        if (navigator.language) {
+            setLanguage(navigator.language)
+        }
+    }, []);
 
     return(
         <Container className={css.container}>
@@ -19,7 +27,7 @@ const ViewItem = function ({ info }) {
                         <h1>{info.title}</h1>
                     </Row>
                     <Row>
-                        <p>Release date: {info.release_date}</p>
+                        <p>Release date: {new Date(info.release_date).toLocaleDateString(language, { day: '2-digit', month: 'short', year: 'numeric' })}</p>
                     </Row>
                     <Row>
                     <ShowMoreText
