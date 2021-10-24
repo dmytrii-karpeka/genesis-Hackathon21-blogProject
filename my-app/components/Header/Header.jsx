@@ -25,13 +25,13 @@ const Header = () => {
                         </div>
                     </Link>
                 </Nav>
-                <Nav>
+                {/*<Nav>*/}
                     {/*<Nav.Item>*/}
                     {/*    <Nav.Link href="/login">*/}
                     {/*        <Button variant="primary">Sign In</Button>*/}
                     {/*    </Nav.Link>*/}
                     {/*</Nav.Item>*/}
-                </Nav>
+                {/*</Nav>*/}
             </Container>
         </Navbar>
     )
