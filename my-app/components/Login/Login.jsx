@@ -19,7 +19,7 @@ const Login = () => {
     signInWithEmailAndPassword(email, password)
     .then(authUser => {
       console.log('authUser', authUser);
-      router.push('/logged_in');
+      router.push('/');
     })
     .catch(error => {
       setError(error.message)

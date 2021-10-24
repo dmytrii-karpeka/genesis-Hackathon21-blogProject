@@ -21,8 +21,8 @@ const RegisterForm = () => {
     if(passwordOne === passwordTwo)
       createUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
-        console.log("Success. The user is created in Firebase")
-        router.push("/logged_in");
+        console.log("Success. The user is created in Firebase");
+        router.push('/');
       })
       .catch(error => {
         // An error occurred. Set error message to be displayed to user
@@ -87,5 +87,5 @@ const RegisterForm = () => {
       </Row>
     </Container>
   )
-
+}
 export default RegisterForm;
