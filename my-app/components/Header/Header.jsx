@@ -2,6 +2,8 @@ import {Navbar, Container, Nav, Button} from 'react-bootstrap';
 
 import css from './Header.module.scss';
 
+import Dropdown from '../Dropdown/Dropdown';
+
 const Header = () => {
     return (
         <Navbar collapseOnSelect bg="dark" variant="dark" className={css.navbarContainer}>
@@ -22,6 +24,9 @@ const Header = () => {
                     <Nav.Item>
                         <Nav.Link href="#">Online</Nav.Link>
                     </Nav.Item>
+                </Nav>
+                <Nav>
+                    <Dropdown/>
                 </Nav>
                 <Nav>
                     <Nav.Item>
