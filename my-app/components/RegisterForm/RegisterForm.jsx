@@ -8,11 +8,8 @@ let RegisterForm = function () {
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
-        let password = document.getElementById('formPassword').value;
-        let repeatedPassword = document.getElementById('formRepeatPassword').value;
-        console.log(password, repeatedPassword);
 
-        if (password !== repeatedPassword && form.checkValidity() === false) {
+        if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
         }
