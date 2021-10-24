@@ -5,6 +5,8 @@ import * as ga from '../lib/ga'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css'
 
+import { AuthUserProvider } from '../contexts/AuthContext';
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
@@ -19,7 +21,7 @@ function MyApp({ Component, pageProps }) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return <AuthUserProvider><Component {...pageProps} /></AuthUserProvider>
 }
 
 export default MyApp
