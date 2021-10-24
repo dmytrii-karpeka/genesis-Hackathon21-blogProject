@@ -1,8 +1,6 @@
-import firebase from "firebase/app";
+import firebase from 'firebase/app';
 import "firebase/auth";
 import "firebase/firestore";
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 
 const clientCredentials = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -13,6 +11,8 @@ const clientCredentials = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
+
+console.log('firebase', firebase);
 
 if (!firebase.apps.length) {
     firebase.initializeApp(clientCredentials);
