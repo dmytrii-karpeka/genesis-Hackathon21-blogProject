@@ -3,7 +3,7 @@ import {InputGroup, FormControl, Button, Container} from 'react-bootstrap';
 
 import css from './Filters.module.scss';
 
-import Dropdown from '../Dropdown/Dropdown';
+import Droplist from '../Droplist/Droplist';
 
 const Filters = ({ onChange }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -15,9 +15,9 @@ const Filters = ({ onChange }) => {
   return (
     <Container className={css.container}>
         <div className={css.dropdownsContainer}>
-          <Dropdown onChange={() => onChange({ type: 'category', value: 'MMORPG' })} />
-          <Dropdown onChange={() => onChange({ type: 'platform', value: 'pc' })} />
-          <Dropdown onChange={() => onChange({ type: 'sortBy', value: 'alphabetical' })} />
+          <Droplist onChange={() => onChange({ type: 'category', value: 'MMORPG' })} />
+          <Droplist onChange={() => onChange({ type: 'platform', value: 'pc' })} />
+          <Droplist onChange={() => onChange({ type: 'sortBy', value: 'alphabetical' })} />
         </div>
 
         <InputGroup className="mb-3">

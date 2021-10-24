@@ -66,7 +66,7 @@ const Droplist = (props) => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-                {props.options.map((option) => {
+                {props.options && props.options.map((option) => {
                     return(
                         <Dropdown.Item onClick={() => props.onChange(option)}>{option.label}</Dropdown.Item>
                     )
