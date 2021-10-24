@@ -14,6 +14,9 @@ const Header = () => {
                          alt="Delta app logo"/>
                 </Navbar.Brand>
                 <Nav>
+                    <Nav.Item className={css.navItem}>
+                        <Nav.Link href="#profile">Username</Nav.Link>
+                    </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey={2} href="#profile">
                             <Image src="https://via.placeholder.com/35"
@@ -23,17 +26,14 @@ const Header = () => {
                                    alt="Profile" roundedCircle/>
                         </Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href="#profile">Username</Nav.Link>
-                    </Nav.Item>
                 </Nav>
-                <Nav>
+                {/*<Nav>*/}
                     {/*<Nav.Item>*/}
                     {/*    <Nav.Link href="/login">*/}
                     {/*        <Button variant="primary">Sign In</Button>*/}
                     {/*    </Nav.Link>*/}
                     {/*</Nav.Item>*/}
-                </Nav>
+                {/*</Nav>*/}
             </Container>
         </Navbar>
     )
