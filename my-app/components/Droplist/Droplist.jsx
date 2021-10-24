@@ -1,5 +1,5 @@
 import {Dropdown} from 'react-bootstrap';
-import css from './Dropdown.module.scss';
+import css from './Droplist.module.scss';
 
 const platformOptions = [
     {
@@ -59,7 +59,6 @@ const sortOptions = [
 ]
 
 const Droplist = (props) => {
-
     return (
         <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
