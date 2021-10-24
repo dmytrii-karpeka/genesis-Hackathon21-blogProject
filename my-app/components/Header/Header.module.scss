@@ -1,0 +1,14 @@
+.navbarContainer {
+  top: 0;
+  z-index: 10;
+  position: sticky;
+  border-bottom: 1px solid white;
+}
+
+.profileLink {
+  cursor: pointer;
+}
+
+.navItem {
+  align-self: center;
+}
