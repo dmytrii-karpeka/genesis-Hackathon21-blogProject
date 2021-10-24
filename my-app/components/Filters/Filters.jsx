@@ -5,6 +5,63 @@ import css from './Filters.module.scss';
 
 import Droplist from '../Droplist/Droplist';
 
+const platformOptions = [
+  {
+      label: "PC (Windows)",
+      value: "pc"
+  },
+  {
+      label: "Web Browser",
+      value: "browser"
+  },
+  {
+      label: "All platforms",
+      value: "all"
+  }
+]
+
+const categoryOptions = [
+  {
+      label: "MMORPG",
+      value: "mmorpg"
+  },
+  {
+      label: "Shooter",
+      value: "shooter"
+  },
+  {
+      label: "PvP",
+      value: "pvp"
+  },
+  {
+      label: "MMOFPS",
+      value: "mmofps"
+  },
+  {
+      label: "Anime",
+      value: "anime"
+  }
+]
+
+const sortOptions = [
+  {
+      label: "Alphabet",
+      value: "alphabetical"
+  },
+  {
+      label: "Release date",
+      value: "release-date"
+  },
+  {
+      label: "Popularity",
+      value: "popularity"
+  },
+  {
+      label: "Relevance",
+      value: "relevance"
+  }
+]
+
 const Filters = ({ onChange }) => {
   const [searchValue, setSearchValue] = useState('');
 
@@ -15,9 +72,9 @@ const Filters = ({ onChange }) => {
   return (
     <Container className={css.container}>
         <div className={css.dropdownsContainer}>
-          <Droplist onChange={() => onChange({ type: 'category', value: 'MMORPG' })} />
-          <Droplist onChange={() => onChange({ type: 'platform', value: 'pc' })} />
-          <Droplist onChange={() => onChange({ type: 'sortBy', value: 'alphabetical' })} />
+          <Droplist options={categoryOptions} category="Category" onChange={(option) => onChange({ type: 'category', value: option.value })} />
+          <Droplist options={platformOptions} category="Platform" onChange={(option) => onChange({ type: 'platform', value: option.value })} />
+          <Droplist options={sortOptions} category="Sort By" onChange={(option) => onChange({ type: 'sortBy', value: option.value })} />
         </div>
 
         <InputGroup className="mb-3">
