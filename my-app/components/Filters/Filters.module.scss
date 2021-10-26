@@ -8,3 +8,22 @@
   display: flex;
   column-gap: 8px;
 }
+
+.InputGroup {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  margin-top: 16px;
+}
+
+.InputSearch {
+  flex-basis: 50%;
+}
+
+@media (max-width: 768px) {
+  .InputSearch {
+    margin-top: 10px;
+    flex-basis: 100%;
+  }
+}

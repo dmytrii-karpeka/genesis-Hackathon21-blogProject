@@ -70,14 +70,14 @@ const Filters = ({ onChange }) => {
   };
 
   return (
-    <Container className={css.container}>
+    <Container className={css.InputGroup}>
         <div className={css.dropdownsContainer}>
           <Droplist options={categoryOptions} category="Category" onChange={(option) => onChange({ type: 'category', value: option.value })} />
           <Droplist options={platformOptions} category="Platform" onChange={(option) => onChange({ type: 'platform', value: option.value })} />
           <Droplist options={sortOptions} category="Sort By" onChange={(option) => onChange({ type: 'sortBy', value: option.value })} />
         </div>
 
-        <InputGroup className="mb-3">
+        <InputGroup className={css.InputSearch}>
           <FormControl
             placeholder="Search by game title"
             aria-label="Search by game title"

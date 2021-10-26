@@ -7,7 +7,7 @@ const ProfileInfo = function () {
     return (
         <Card className="text-center">
             <Card.Body>
-                <Image src="https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-Resize-B3J09qVGW8Pu6GO.jpg" roundedCircle/>
+                <Image src="https://off-bot.ru/data/avatars/l/0/165.jpg" roundedCircle/>
                 <Card.Title>Agent Smith</Card.Title>
                 <Card.Text>
                     Email: agent.smith@delta.com

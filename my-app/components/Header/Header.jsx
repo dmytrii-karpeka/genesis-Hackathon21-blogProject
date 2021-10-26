@@ -18,7 +18,7 @@ const Header = () => {
                     <Link href="/profile">
                         <div className={css.profileLink}>
                             <Image
-                                src="https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-Resize-7IYhhOMpQTI83u.jpg"
+                                src="https://off-bot.ru/data/avatars/l/0/165.jpg"
                                 width="40"
                                 height="40"
                                 className="d-inline-block align-top"
