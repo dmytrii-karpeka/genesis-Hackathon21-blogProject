@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "eslint": "8.1.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "react-firebaseui": "^5.0.2"
   }
 }
